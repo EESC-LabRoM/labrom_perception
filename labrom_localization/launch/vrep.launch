@@ -1,5 +1,7 @@
 <launch>
+
 <group ns="quadrotor">
+  <!-- ########################## APRILTAG ########################## -->
   <node pkg="apriltags_ros" type="apriltag_detector_node" name="apriltag_detector" output="screen">
     <!-- Remap topic required by the node to custom topics -->
     <remap from="image_rect" to="image_color" />
@@ -20,5 +22,19 @@
       {id: 0, size: 0.08, frame_id: landamrk}]
     </rosparam>
   </node>
+  
+  <!-- ########################## TAG FUSION ########################## -->
+    
+    
+  <!-- ################### ROBOT LOCALIZATION (EKF) ################### -->
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+    <rosparam command="load" file="$(find labrom_localization)/params/ekf_vrep_apriltags.yaml" />
+
+    <!--  Placeholder for output topic remapping
+    <remap from="odometry/filtered" to=""/>
+
+
+</node>  
+      
 </group>
 </launch>
