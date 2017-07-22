@@ -31,8 +31,8 @@ class AprilTagFusion
  */
 AprilTagFusion::AprilTagFusion(void)
 {
-    sub_at_ = nh_.subscribe("/tag_detections", 1, &AprilTagFusion::AprilTagDetectionArrayCallback, this);
-    pub_camera_pose_ = nh_.advertise<geometry_msgs::PoseWithCovarianceStamped>("/pose", 1);
+    sub_at_ = nh_.subscribe("tag_detections", 1, &AprilTagFusion::AprilTagDetectionArrayCallback, this);
+    pub_camera_pose_ = nh_.advertise<geometry_msgs::PoseWithCovarianceStamped>("apriltag_pose", 1);
 };
 
 /**
@@ -83,9 +83,9 @@ void AprilTagFusion::AprilTagDetectionArrayCallback(const apriltags_ros::AprilTa
     }
 
     geometry_msgs::PoseWithCovarianceStamped camera_pose;
-    camera_pose.pose.pose.position.x = f_pos.getX();
+    camera_pose.pose.pose.position.x = f_pos.getX() ;
     camera_pose.pose.pose.position.y = f_pos.getY();
-    camera_pose.pose.pose.position.z = f_pos.getZ();
+    camera_pose.pose.pose.position.z = f_pos.getZ() ;
 
     camera_pose.pose.pose.orientation.x = qt.x();
     camera_pose.pose.pose.orientation.y = qt.y();
@@ -97,13 +97,13 @@ void AprilTagFusion::AprilTagDetectionArrayCallback(const apriltags_ros::AprilTa
             if(i == j) {
                 camera_pose.pose.covariance[i*6 + j] = 0.01;
             } else {
-                camera_pose.pose.covariance[i*6 + j] = 0;
+                camera_pose.pose.covariance[i*6 + j] = 0.01;
             }
         }
     }
 
     camera_pose.header.stamp = ros::Time::now();
-    camera_pose.header.frame_id = tag_array->detections[0].pose.header.frame_id;
+    camera_pose.header.frame_id = "odom";//tag_array->detections[0].pose.header.frame_id;
 
     pub_camera_pose_.publish(camera_pose);
 }
