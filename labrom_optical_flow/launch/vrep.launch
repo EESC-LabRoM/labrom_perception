@@ -1,0 +1,19 @@
+<launch>
+ <!-- ######################## STATIC TRANSFORMS ##########################	-->
+ <!--  <node pkg="tf" type="static_transform_publisher" name="camera_odom_transform" args="0 0 0 0 0 0 camera fcu 1000"/> -->
+ <node name="optical_flow" type="continuous_homography_node" pkg="labrom_optical_flow" args="/home/active/catkin_ws/src/labrom_optical_flow/params/vrep_calibration.yaml" output="screen">
+    <rosparam file="$(find labrom_optical_flow)/params/optical_flow.yaml" />
+     <!-- Subscribers -->
+     <remap from="camera/camera_info" to="/quadrotor/camera_info"/>
+  	 <remap from="camera/image_raw" to="/quadrotor/image_raw"/>
+		 <remap from="odometry" to="/quadrotor/odometry"/>
+		 <remap from="imu" to="/quadrotor/imu"/>
+     <remap from="pose" to="/pose"/>
+
+     <!-- Publishers  -->
+		 <remap from="optical_flow/odometry" to="optical_flow/odometry"/>
+		 <remap from="optical_flow/image" to="optical_flow/image"/>
+     <!-- Parameters -->
+     <rosparam file="$(find labrom_optical_flow)/params/optical_flow.yaml" />
+  </node>
+</launch>

@@ -1,0 +1,16 @@
+# Frames
+odom_frame_id: odom
+# Optical flow parameters
+max_nb_features_to_be_tracked: 80
+min_nb_features_to_be_tracked: 40
+min_frame_rate_in_secs: 0.15
+initial_height: 0.0
+min_height: 0.05
+estimate_N: true
+estimate_w: false
+draw_optical_flow: true
+N: [0,0,1]
+
+# Low pass filter
+alpha: 0.6
+

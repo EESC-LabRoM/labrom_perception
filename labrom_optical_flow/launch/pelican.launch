@@ -1,0 +1,16 @@
+<launch>
+  <node name="optical_flow" type="continuous_homography_node" pkg="labrom_optical_flow">
+    <rosparam file="$(find labrom_optical_flow)/params/optical_flow.yaml" />
+     <!-- Subscribers -->
+     <remap from="camera/camera_info" to="camera/camera_info"/>
+  	 <remap from="camera/image_raw" to="camera/image_raw"/>
+		 <remap from="odometry" to="ekf/odometry/odom"/>
+  	 <remap from="pose" to="/sonar/pose"/>
+		 <remap from="imu" to="/fcu/imu"/>
+     <!-- Publishers  -->
+		 <remap from="optical_flow/odometry" to="optical_flow/odometry"/>
+		 <remap from="optical_flow/image" to="optical_flow/image"/>  
+  </node>
+  </launch>
+
+  

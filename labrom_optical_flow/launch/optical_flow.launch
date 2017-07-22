@@ -1,0 +1,18 @@
+<launch>
+ <!-- ######################## STATIC TRANSFORMS ##########################	-->
+ <!--  <node pkg="tf" type="static_transform_publisher" name="camera_odom_transform" args="0 0 0 0 0 0 camera fcu 1000"/> -->
+ <node name="optical_flow" type="continuous_homography_node" pkg="labrom_optical_flow" output="screen">
+    <rosparam file="$(find labrom_optical_flow)/params/optical_flow.yaml" />
+     <!-- Subscribers -->
+     <remap from="camera/camera_info" to="/camera/camera_info"/>
+  	 <remap from="camera/image_raw" to="/camera/image_raw"/>
+		 <remap from="odometry" to="/odometry"/>
+     <remap from="pose" to="/pose"/>
+		 <remap from="imu" to="/imu"/>
+     <!-- Publishers  -->
+		 <remap from="optical_flow/odometry" to="optical_flow/odometry"/>
+		 <remap from="optical_flow/image" to="optical_flow/image"/>
+     <!-- Parameters -->
+     <rosparam file="$(find labrom_optical_flow)/params/optical_flow.yaml" />
+  </node>
+</launch>
