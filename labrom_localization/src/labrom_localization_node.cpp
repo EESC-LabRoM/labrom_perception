@@ -31,7 +31,7 @@ class AprilTagFusion
  */
 AprilTagFusion::AprilTagFusion(void)
 {
-    sub_at_ = nh_.subscribe("/quadrotor/tag_detections", 1, &AprilTagFusion::AprilTagDetectionArrayCallback, this);
+    sub_at_ = nh_.subscribe("/tag_detections", 1, &AprilTagFusion::AprilTagDetectionArrayCallback, this);
     pub_camera_pose_ = nh_.advertise<geometry_msgs::PoseWithCovarianceStamped>("/pose", 1);
 };
 
