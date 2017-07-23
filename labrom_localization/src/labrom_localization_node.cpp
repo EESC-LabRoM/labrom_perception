@@ -87,10 +87,10 @@ void AprilTagFusion::AprilTagDetectionArrayCallback(const apriltags_ros::AprilTa
     camera_pose.pose.pose.position.y = f_pos.getY();
     camera_pose.pose.pose.position.z = f_pos.getZ() ;
 
-    camera_pose.pose.pose.orientation.x = qt.x();
-    camera_pose.pose.pose.orientation.y = qt.y();
-    camera_pose.pose.pose.orientation.z = qt.z();
-    camera_pose.pose.pose.orientation.w = qt.w();
+    camera_pose.pose.pose.orientation.x = f_qt.x();
+    camera_pose.pose.pose.orientation.y = f_qt.y();
+    camera_pose.pose.pose.orientation.z = f_qt.z();
+    camera_pose.pose.pose.orientation.w = f_qt.w();
 
     for(int i = 0; i < 6; i++) {
         for(int j = 0; j < 6; j++) {
