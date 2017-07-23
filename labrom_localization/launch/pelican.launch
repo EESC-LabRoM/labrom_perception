@@ -1,0 +1,37 @@
+<launch>
+
+  <!-- ########################## APRILTAG ########################## -->
+  <node pkg="apriltags_ros" type="apriltag_detector_node" name="apriltag_detector" output="screen">
+    <!-- Remap topic required by the node to custom topics -->
+    <remap from="image_rect" to="image_color" />
+    <remap from="camera_info" to="camera_info" />
+
+    <!-- Optional: Subscribe to the compressed stream-->
+    <param name="image_transport" type="str" value="raw" />
+
+    <!-- Select the tag family: 16h5, 25h7, 25h9, 36h9, or 36h11(default) -->
+    <param name="tag_family" type="str" value="36h11" />
+
+    <!-- Enable projected optical measurements for more accurate tag transformations -->
+    <!-- This exists for backwards compatability and should be left true for new setups -->
+    <param name="projected_optics" type="bool" value="true" />
+
+    <!-- Describe the tags -->
+    <rosparam param="tag_descriptions">[
+      {id: 0, size: 0.08, frame_id: landamrk}]
+    </rosparam>
+  </node>
+  
+  <!-- ########################## TAG FUSION ########################## -->
+  <node pkg="labrom_localization" type="labrom_localization_node" name="apriltag_localization" output="screen">
+  </node>
+    
+    
+  <!-- ################### ROBOT LOCALIZATION (EKF) ################### -->
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf" clear_params="false" output="screen">
+    <rosparam command="load" file="$(find labrom_localization)/params/ekf_pelican_apriltags.yaml" />
+    <!-- Placeholder for output topic remapping -->
+    <remap from="pose_0" to="apriltag_pose"/>
+  </node>
+      
+</launch>
