@@ -7,6 +7,7 @@
  
 ### Suplementary material
 Click on the image below for a demo video:
+
 [![](https://img.youtube.com/vi/XogkvyGrRww/mqdefault.jpg)](https://www.youtube.com/watch?v=XogkvyGrRww)
  
 * **uspart_viso_odom**: [Documentation](http://www.labrom.eesc.usp.br/doxygen/viso_odom/html)
