@@ -6,7 +6,7 @@ The method has been succeffully evaluated on different quadrotors using a downwa
 
 Click on the figures below for demo:
 
-&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/v3DzcVIi7Ec/mqdefault.jpg)](https://www.youtube.com/watch?v=v3DzcVIi7Ec) &nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/z2mk09uS8gQ/mqdefault.jpg)](https://www.youtube.com/watch?v=z2mk09uS8gQ)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/v3DzcVIi7Ec/mqdefault.jpg)](https://www.youtube.com/watch?v=v3DzcVIi7Ec) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/z2mk09uS8gQ/mqdefault.jpg)](https://www.youtube.com/watch?v=z2mk09uS8gQ)
 
 [1] V. Grabe, H. H. Bulthoff, P. Robuffo Giordano. Robust Optical-Flow Based Self-Motion Estimation for a Quadrotor UAV. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2012), 2153-2159.
 
