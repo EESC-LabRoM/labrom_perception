@@ -8,6 +8,8 @@ Click on the figures below for demo:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/v3DzcVIi7Ec/mqdefault.jpg)](https://www.youtube.com/watch?v=v3DzcVIi7Ec) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/z2mk09uS8gQ/mqdefault.jpg)](https://www.youtube.com/watch?v=z2mk09uS8gQ)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/Pd032tr6QTE/mqdefault.jpg)](https://www.youtube.com/watch?v=Pd032tr6QTE)
+
 [1] V. Grabe, H. H. Bulthoff, P. Robuffo Giordano. Robust Optical-Flow Based Self-Motion Estimation for a Quadrotor UAV. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2012), 2153-2159.
 
 [2] V. Grabe, H. H. Bulthoff, P. Robuffo Giordano. On-board velocity estimation and closed-loop control of a quadrotor UAV based on optical flow. IEEE International Conference on Robotics and Automation (ICRA 2012), 491-497.
