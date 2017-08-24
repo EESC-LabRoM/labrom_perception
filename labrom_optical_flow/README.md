@@ -6,7 +6,7 @@ The method has been succeffully evaluated on different quadrotors using a downwa
 
 Click on the figures below for demo:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/v3DzcVIi7Ec/mqdefault.jpg)](https://www.youtube.com/watch?v=v3DzcVIi7Ec) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/z2mk09uS8gQ/mqdefault.jpg)](https://www.youtube.com/watch?v=z2mk09uS8gQ)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/v3DzcVIi7Ec/mqdefault.jpg)](https://www.youtube.com/watch?v=v3DzcVIi7Ec) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/UsRK1a4ga04/mqdefault.jpg)](https://youtu.be/UsRK1a4ga04)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![](https://img.youtube.com/vi/Pd032tr6QTE/mqdefault.jpg)](https://www.youtube.com/watch?v=Pd032tr6QTE)
 
